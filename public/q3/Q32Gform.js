@@ -38,3 +38,19 @@ form.addEventListener("reset", function(e) { //
     e.preventDefault(); // cancel the reset if user clicks "Cancel"
   }
 });
+
+function change(ele) {
+  console.log(ele);
+  ele.style.backgroundColor = "lightblue";
+}
+
+function resetThis(ele) {
+  if (ele.value.trim() == "") {
+    console.log(ele);
+    ele.style.backgroundColor = "gray";
+  } else {
+    console.log(ele);
+    ele.style.backgroundColor = "white";
+  }
+}
+

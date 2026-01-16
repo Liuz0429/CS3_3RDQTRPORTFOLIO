@@ -16,11 +16,11 @@
           font-family: arial;
           width: 80%;
           margin-left: 10%;
-          background-color: beige;
+          background-color: rgb(15, 53, 100);
         }
 
         header {
-          background-color:#5C6AC4;
+          background-color:#6343ad;
           width: fit-content;
           padding: 0.5rem;
           border: solid gray 3px;
@@ -40,7 +40,7 @@
 
         legend {
             background: black;
-            color: yellow;
+            color: rgb(145, 106, 238);
             padding: 5px;
         }
 
@@ -57,6 +57,11 @@
           background-color: #2f42bd; 
           padding: 0.5rem;
         }
+
+        input:focus { 
+          outline: 2px solid rgb(167, 88, 241);
+        }
+
 
     </style>
   </head>
@@ -79,22 +84,22 @@
         <fieldset>
           <legend>Your Credentials</legend><br/>
           <label> Student ID:
-            <input type="number" name="studid" id="studid" required />
+            <input type="number" name="studid" id="studid" required onblur="resetThis(this)"/>
           </label><br/><br/>
           <label> Full Name: 
-            <input type="text" name="fname" id="fname" required />
+            <input type="text" onblur="resetThis(this)" name="fname" id="fname" required />
           </label><br/><br/>
           <label> Birthday: 
-            <input type="date" name="bday" id="bday" required />
+            <input type="date" onfocus="change(this)" onblur="resetThis(this)" name="bday" id="bday" required />
           </label><br/><br/>
           <label> Email Address: 
-            <input type="email" name="email" id="email" required />
+            <input type="email" onfocus="change(this)" onblur="resetThis(this)" name="email" id="email" required />
           </label><br/><br/>
           <label> Mobile Phone Number: 
-            <input type="text" name="pnum" id="pnum" required />
+            <input type="text" onfocus="change(this)" onblur="resetThis(this)" name="pnum" id="pnum" required />
           </label><br/><br/>
           <label for="glev">Grade Level:</label>
-          <select name="glev" id="glev">
+          <select name="glev" id="glev" onfocus="change(this)" onblur="resetThis(this)">
 
           <option value="g7">Grade 7</option>
           <option value="g8">Grade 8</option>
@@ -109,7 +114,7 @@
             <input type="radio" name="tern" value="Extern" /> Extern
           </label><br/><br/>
           <label for="club">Preferred Club:</label>
-          <select name="club" id="club">
+          <select onfocus="change(this)" onblur="resetThis(this)" name="club" id="club">
 
           <option value="vol">Volant</option>
           <option value="elip">Ellipsis</option>
@@ -119,7 +124,7 @@
 
           </select><br/><br/>
           <label> Why do you want to join this club?: 
-            <textarea name="about" id="about">
+            <textarea onfocus="change(this)" onblur="resetThis(this)" name="about" id="about">
               
             </textarea>
           </label><br/><br/>
@@ -127,7 +132,7 @@
           
         </fieldset>  
         <fieldset>
-          <legend>Action Buttons</legend>
+          <legend>Submit?</legend>
           <button type="submit"> Accept </button>
           <input type="reset" value=" Clear " />
         </fieldset> 
