@@ -17,10 +17,10 @@ form.addEventListener("submit", function(e) { // assign an event handler of subm
         const obj = Object.fromEntries(data.entries()); // get all the data from the form
         // place the object inside the accountList
         // accountList is an object containing other objects with username as the key
-        accountList[obj.uname] = {};
+        accountList[obj.studid] = {};
         for (let key in obj) { // go through the properties of the object and create another account
-            if (key != "uname") { 
-                accountList[obj.uname][key] = obj[key];
+            if (key != "studid") { 
+                accountList[obj.studid][key] = obj[key];
             }
         }
         

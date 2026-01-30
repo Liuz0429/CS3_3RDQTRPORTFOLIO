@@ -20,10 +20,10 @@
         }
 
         header {
-          background-color:#6343ad;
+          background-color:#a887f7;
           width: fit-content;
           padding: 0.5rem;
-          border: solid gray 3px;
+          border: solid rgb(44, 44, 44) 3px;
         }
 
         .title {
@@ -31,7 +31,7 @@
             background-color: cornflowerblue;
             width: fit-content;
             padding: 0.5rem;
-            border: solid gray 3px;
+            border: solid rgb(44, 44, 44) 3px;
         }
 
         fieldset:nth-child(2) {
@@ -75,12 +75,12 @@
         </div>
         <nav class="navbar">
             <a href="/index.html"> Home </a> <br>
-            <a href="registered.html"> Show Saved Accounts </a>
+            <a href="viewSignUps.html"> Show Saved Accounts </a>
         </nav>
     </header>
     <section>
       <h1 class="title">Sign-up Page for a Club</h1>
-      <form id="dForm" action="registered.html" method="get">
+      <form id="dForm" method="get">
         <fieldset>
           <legend>Your Credentials</legend><br/>
           <label> Student ID:
@@ -101,12 +101,12 @@
           <label for="glev">Grade Level:</label>
           <select name="glev" id="glev" onfocus="change(this)" onblur="resetThis(this)">
 
-          <option value="g7">Grade 7</option>
-          <option value="g8">Grade 8</option>
-          <option value="g9">Grade 9</option>
-          <option value="g10">Grade 10</option>
-          <option value="g11">Grade 11</option>
-          <option value="g12">Grade 12  </option>
+          <option value="Grade 7">Grade 7</option>
+          <option value="Grade 8">Grade 8</option>
+          <option value="Grade 9">Grade 9</option>
+          <option value="Grade 10">Grade 10</option>
+          <option value="Grade 11">Grade 11</option>
+          <option value="Grade 12">Grade 12  </option>
 
           </select><br/><br/>
           <label> Intern or Extern:
@@ -116,11 +116,11 @@
           <label for="club">Preferred Club:</label>
           <select onfocus="change(this)" onblur="resetThis(this)" name="club" id="club">
 
-          <option value="vol">Volant</option>
-          <option value="elip">Ellipsis</option>
-          <option value="kislap">Kislap</option>
-          <option value="int">Intyale</option>
-          <option value="inv">Invictus</option>
+          <option value="Volant">Volant</option>
+          <option value="Ellipsis">Ellipsis</option>
+          <option value="Kislap">Kislap</option>
+          <option value="Intyale">Intyale</option>
+          <option value="Invictus">Invictus</option>
 
           </select><br/><br/>
           <label> Why do you want to join this club?: 
